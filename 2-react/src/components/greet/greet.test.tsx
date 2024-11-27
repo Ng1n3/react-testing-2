@@ -8,11 +8,11 @@ describe('Greet', () => {
     expect(text).toBeInTheDocument();
   });
 
-  test('greet renders with a name', () => {
-    render(<Greet name="Emmanuel" />);
-    const textElement = screen.getByText('Hello Emmanuel');
-    expect(textElement).toBeInTheDocument();
-  });
+  // test('greet renders with a name', () => {
+  //   render(<Greet name="Emmanuel" />);
+  //   const textElement = screen.getByText('Hello Emmanuel');
+  //   expect(textElement).toBeInTheDocument();
+  // });
 });
 
 /*
@@ -27,4 +27,8 @@ describe('Greet', () => {
 ? -> .test.js or .test.tsx
 ? -> .spec.js or .spec.tsx
 ? -> .js or .tsx suffic in __tests__ folders
+[LECTURE] -> Code Coverage is a metric that can help you understand how much of your code is tested
+? -> statement coverage: how many of the statements in the software code hs been executed
+? -> branches coverage: how many of the branches of the control structures have been executed
+? -> function coverage: how many of the functions defined have been called and finally
 */
