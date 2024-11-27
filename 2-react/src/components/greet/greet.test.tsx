@@ -31,4 +31,13 @@ describe('Greet', () => {
 ? -> statement coverage: how many of the statements in the software code hs been executed
 ? -> branches coverage: how many of the branches of the control structures have been executed
 ? -> function coverage: how many of the functions defined have been called and finally
+[LECTURE] -> What to Test?
+? -> Test component renders
+? -> Test component renders with this.this.props
+? -> Test component renders in different states
+? -> Test component reacts to events
+[LECTURE] -> What not to Test?
+? -> Implementation details, test the result not the implementation of the code
+? -> Third party code
+? -> Code that is not important frpm a user point of view, e.g. A utility function to display the date in a nice way.
 */
