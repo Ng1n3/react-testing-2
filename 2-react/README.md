@@ -20,7 +20,7 @@ This is a metric that can help you understand how much of your code is tested
 - Test component renders with this.this.props
 - Test component renders in different states
 - Test component reacts to events
-## What not to Test?
+## What not to Test
 - Implementation details, test the result not the implementation of the code
 - Third party code
 - Code that is not important frpm a user point of view, e.g. A utility function to display the date in a nice way.
