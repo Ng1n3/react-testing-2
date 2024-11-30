@@ -19,14 +19,23 @@ describe('Application', () => {
     const paragraphElement = screen.getByText('All fields are mandatory');
     expect(paragraphElement).toBeInTheDocument();
 
-    const closeElement = screen.getByTitle('close')
-    expect(closeElement).toBeInTheDocument()
+    const pElement = screen.getByText(/^all fields are mandatory$/i);
+    expect(pElement).toBeInTheDocument();
+
+    const pElement1 = screen.getByText((content) => content.startsWith('All'))
+    expect(pElement1).toBeInTheDocument()
+
+    const pElement2 = screen.getByText('all fields are mandatory', { exact: false });
+    expect(pElement2).toBeInTheDocument();
+
+    const closeElement = screen.getByTitle('close');
+    expect(closeElement).toBeInTheDocument();
 
     const imageElement = screen.getByAltText('a person with a laptop');
     expect(imageElement).toBeInTheDocument();
 
-    const customElement = screen.getByTestId('custom-element')
-    expect(customElement).toBeInTheDocument()
+    const customElement = screen.getByTestId('custom-element');
+    expect(customElement).toBeInTheDocument();
 
     const nameElement = screen.getByRole('textbox', {
       name: 'Name',

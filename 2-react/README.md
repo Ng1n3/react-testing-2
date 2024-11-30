@@ -55,7 +55,7 @@ the suffix can be one of Role, LabelText, PlaceHolderText, Text, DisplayValue, A
 
 - getByDisplay value returns the input, textarea or select element that has matching display value
 - getByAltText retuns the element that has the given alt text, supports ``<img>, <input>, <area>`` or custom HTML elements
--getByTestId returns the element that has the matching data==testid attribute
+- getByTestId returns the element that has the matching data==testid attribute
 
 ## Priority Order for Queries
 Your test should resemble how users interact with your code (component, page, etc) as much as possible.
@@ -66,3 +66,13 @@ Your test should resemble how users interact with your code (component, page, et
 - getByDisplayValue
 - getByAltText
 - getByTestId
+
+### TextMatch - regex
+``<div>Hello world</div>``
+- screen.getByText(/World/) -> Substring match
+- screen.getByText(/world/i) -> substring match, ignore case
+- screen.getByText(/^hello world$/i) -> full string match, ignore case
+
+### TextMatch - custom function
+``<div>Hello world</div>``
+- screen.getByText((content) => content.startsWith('Hello'))
