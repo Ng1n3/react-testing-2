@@ -22,10 +22,12 @@ describe('Application', () => {
     const pElement = screen.getByText(/^all fields are mandatory$/i);
     expect(pElement).toBeInTheDocument();
 
-    const pElement1 = screen.getByText((content) => content.startsWith('All'))
-    expect(pElement1).toBeInTheDocument()
+    const pElement1 = screen.getByText((content) => content.startsWith('All'));
+    expect(pElement1).toBeInTheDocument();
 
-    const pElement2 = screen.getByText('all fields are mandatory', { exact: false });
+    const pElement2 = screen.getByText('all fields are mandatory', {
+      exact: false,
+    });
     expect(pElement2).toBeInTheDocument();
 
     const closeElement = screen.getByTitle('close');
@@ -71,5 +73,6 @@ describe('Application', () => {
 
     const submitButtonElement = screen.getByRole('button');
     expect(submitButtonElement).toBeInTheDocument();
+    expect(submitButtonElement).toBeDisabled();
   });
 });

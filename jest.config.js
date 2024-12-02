@@ -19,6 +19,6 @@ module.exports = {
   },
   
   // Other configurations...
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-fixed-jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts']
 };
